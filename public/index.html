@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
     <title>Dynamic Chats</title>
 </head>
 <body>
-    <h1>Dynamics Chat</h1>
+    <h1>Dynamic Chats</h1>
+    <div class="chat-window" id="chat-window">
+        <div class="chat-nav-bar">
+            <input type="text" id="name-input" class="name-input" value="someone" maxlength="30"/>
+        </div>
+
+        <ul class="chat-area" id="chat-area">
+                <li class="inward-message" id="inward-message">
+                    <p class="message">Hi, Anotherone</p>
+                    <span>someone is here ~ 16 Dec 21:24</span>
+                </li>
+
+                <li class="outward-message" id="outward-message">
+                    <p class="message">Hi, Someone</p>
+                    <span>anotherone is here ~ 16 Dec 21:24</span>
+                </li>
+
+                <li class="typing-indication"><p class="indication" id="indication"></p>somebody is typing</li>
+        </ul>
+
+        <form action="" class="send-message" id="send-message">
+            <input type="text" name="message" class="message-input" id="message-input">
+            <button type="submit" class="sending-button">
+                Send>
+            </button>
+        </form>
+
+        <h3 class="total-users" id="total-users">Total Users: 3</h3>
+    </div>
+
     
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
